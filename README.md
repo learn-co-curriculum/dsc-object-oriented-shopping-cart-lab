@@ -6,6 +6,8 @@ In this lab we will be mimicing the functionality of a shopping cart with our kn
 
 ## Objectives
 
+You will be able to:
+
 * Build a class with instance methods
 * Call instance methods inside of other instance methods
 * Use instance methods to track information pertinent to an instance of a class
