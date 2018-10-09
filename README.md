@@ -1,5 +1,5 @@
 
-# Python Object Oriented Shopping Cart Lab
+# Object Oriented Shopping Cart - Lab
 
 ## Introduction
 In this lab we will be mimicing the functionality of a shopping cart with our knowledge of object oriented Python. Our shopping cart will be able to add items of different quantities and prices to our cart, calculate discounts, keep track of what items have been added, and void transactions.
