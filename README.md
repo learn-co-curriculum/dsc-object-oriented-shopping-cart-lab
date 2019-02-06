@@ -27,7 +27,7 @@ To start, we'll set this notebook to autoreload packages so that when you update
 
 ```python
 #Import our custom package
-from shopping_cart_wrking import ShoppingCart
+from shopping_cart import ShoppingCart
 ```
 
 
@@ -51,7 +51,7 @@ print(shopping_cart.items)
     0
     None
     []
-    
+
 
 ## Add and `add_item()` method.
 
@@ -151,7 +151,7 @@ print(shopping_cart.apply_discount()) # Sorry, there is no discount to apply to 
     1060.0
     848.0
     Sorry, there is no discount to apply to your cart :(
-    
+
 
 ## Add a `void_last_item()` method
 
