@@ -2,7 +2,7 @@
 # Object Oriented Shopping Cart - Lab
 
 ## Introduction
-In this lab we will be mimicing the functionality of a shopping cart with our knowledge of object oriented Python. Our shopping cart will be able to add items of different quantities and prices to our cart, calculate discounts, keep track of what items have been added, and void transactions.
+In this lab you'll be mimicking the functionality of a shopping cart with our knowledge of object oriented Python. Your shopping cart will be able to add items of different quantities and prices to the cart, calculate discounts, keep track of what items have been added, and void transactions.
 
 ## Objectives
 
@@ -16,7 +16,7 @@ You will be able to:
 
 In this lab, you'll practice your object orientated programming skills by modifying the shopping_cart.py file.
 
-To start, we'll set this notebook to autoreload packages so that when you update shopping_cart.py, you can experiment with the effects here. Remember that while the package will be reloaded, you will need to reinitialize your class instance. Here's an example to get you started:
+To start, you'll once again set this notebook to autoreload packages so that when you update shopping_cart.py, you can experiment with the effects here. Remember that while the package will be reloaded, you will need to reinitialize your class instance. Here's an example to get you started:
 
 
 ```python
@@ -26,7 +26,7 @@ To start, we'll set this notebook to autoreload packages so that when you update
 
 
 ```python
-#Import our custom package
+#Import your custom package
 from shopping_cart import ShoppingCart
 ```
 
@@ -57,7 +57,7 @@ print(shopping_cart.items)
 
 Define an instance method called `add_item` that will add an item to our cart. It should take in the name of an item, its price and an optional quantity. The method should increase the shopping cart's total by the appropriate amount and return the new total for the shopping cart.
 
-> **hint:** think about how you would like to keep this information in your list of items. Can we imagine wanting to ever check the price of an individual item after we've added it to our cart? What data type do we know of that can associate the item name with it's price?
+> **Hint:** think about how you would like to keep this information in your list of items. Can we imagine wanting to ever check the price of an individual item after we've added it to our cart? What data type do we know of that can associate the item name with it's price?
 
 
 ```python
@@ -130,7 +130,7 @@ shopping_cart.median_item_price() # 50.00
 
 ## Add an `apply_discount` method
 
-Now, let's define an instance method called `apply_discount` that applies a discount if one is provided and returns the discounted total. For example, if we initialize a new shopping cart with a discount of 20% then our total should be discounted in the amount of 20%. So, if our total were `$100`, after the discount we only would owe `$80`.
+Now, define an instance method called `apply_discount` that applies a discount if one is provided and returns the discounted total. For example, if you initialize a new shopping cart with a discount of 20% then our total should be discounted in the amount of 20%. So, if our total were `$100`, after the discount you only would owe `$80`.
 
 If our shopping cart does not have an employee discount, then it should return a string saying: `"Sorry, there is no discount to apply to your cart :("`
 
@@ -155,7 +155,7 @@ print(shopping_cart.apply_discount()) # Sorry, there is no discount to apply to 
 
 ## Add a `void_last_item()` method
 
-Finally, we are missing one piece of functionality. What if we just accidentally added something to our cart or decided that this item is too expensive for our budget? Let's define a method called `void_last_item` that removes the last item from our shopping cart and updates its total.  If there are no items in the shopping cart, `void_last_item` should return `"There are no items in your cart!"`.
+Finally, you are missing one piece of functionality. What if someone just accidentally added something to their cart or decided that this item is too expensive for their budget? Define a method called `void_last_item` that removes the last item from the shopping cart and updates its total.  If there are no items in the shopping cart, `void_last_item` should return `"There are no items in your cart!"`.
 
 
 ```python
@@ -171,4 +171,4 @@ shopping_cart.total # 156.49
 
 
 ## Summary
-In this lab, we practiced using instance methods to mimic the functionality of a shopping cart as well as defined methods that give us the mean and median prices of all the items in our cart. 
+In this lab, you practiced using instance methods to mimic the functionality of a shopping cart as well as defined methods that give you the mean and median prices of all the items in the cart. 
