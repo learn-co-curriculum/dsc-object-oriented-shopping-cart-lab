@@ -27,7 +27,7 @@ To start, you'll once again set this notebook to autoreload packages so that whe
 
 ```python
 #Import our custom package
-from shopping_cart_wrking import ShoppingCart
+from shopping_cart import ShoppingCart
 ```
 
 
