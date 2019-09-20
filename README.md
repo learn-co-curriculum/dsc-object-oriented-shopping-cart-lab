@@ -47,7 +47,7 @@ shopping_cart = ShoppingCart()
 ```python
 # __SOLUTION__ 
 #Import our custom package
-from shopping_cart_wrking import ShoppingCart
+from shopping_cart import ShoppingCart
 ```
 
 
