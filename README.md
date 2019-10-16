@@ -8,9 +8,11 @@ In this lab, you'll be mimicking the functionality of a shopping cart with our k
 
 You will be able to:
 
-* Build a class with instance methods
+* Define and call an instance method
+* Define and access instance attributes
 * Call instance methods inside of other instance methods
-* Use instance methods to track information pertinent to an instance of a class
+* Create methods that calculate statistics of the attributes of an object
+* Create a domain model using OOP
 
 ## Instructions
 
@@ -59,7 +61,7 @@ shopping_cart = ShoppingCart()
 
 ## Add an Initialization Behavior to the ShoppingCart Class
 
-Update your shopping_cart.py file to include an __init__ method. This should define three default attributes: 'total', which should be set to 0, 'employee_discount', set to None and 'items', set to a blank list. The line of code below should work and produce the previewed output once you do this.
+Update your shopping_cart.py file to include an `__init__` method. This should define three default attributes: 'total', which should be set to 0, 'employee_discount', set to None and 'items', set to a blank list. The line of code below should work and produce the previewed output once you do this.
 
 
 ```python
@@ -90,7 +92,7 @@ print(shopping_cart.items)
 
 ## Add and `add_item()` method.
 
-Define an instance method called `add_item` that will add an item to our cart. It should take in the name of an item, its price, and an optional quantity. The method should increase the shopping cart's total by the appropriate amount and return the new total for the shopping cart.
+Define an instance method called `add_item()` that will add an item to our cart. It should take in the name of an item, its price, and an optional quantity. The method should increase the shopping cart's total by the appropriate amount and return the new total for the shopping cart.
 
 > **Hint:** think about how you would like to keep this information in your list of items. Can we imagine wanting to ever check the price of an individual item after we've added it to our cart? What data type do we know of that can associate the item name with its price?
 
@@ -171,7 +173,7 @@ shopping_cart.add_item("jeans", 50.00, 3) # 206.49
 
 ## Add Summary Methods `mean_item_price()` and `median_item_price()` 
 
-Define two more instance methods: `mean_item_price` and `median_item_price`, which should return the average price per item and the median price of the items in your cart, respectively. 
+Define two more instance methods: `mean_item_price()` and `median_item_price()`, which should return the average price per item and the median price of the items in your cart, respectively. 
 
 > **Remember:** the mean is the average price per item and to find the median we must do three things:
 * First, put all numbers in our list in ascending order (smallest to greatest)
@@ -230,7 +232,7 @@ shopping_cart.median_item_price() # 50.00
 
 ## Add an `apply_discount` method
 
-Now, define an instance method called `apply_discount` that applies a discount if one is provided and returns the discounted total. For example, if you initialize a new shopping cart with a discount of 20% then our total should be discounted in the amount of 20%. So, if our total were `$100`, after the discount you only would owe `$80`.
+Now, define an instance method called `apply_discount()` that applies a discount if one is provided and returns the discounted total. For example, if you initialize a new shopping cart with a discount of 20% then our total should be discounted in the amount of 20%. So, if our total were `$100`, after the discount you only would owe `$80`.
 
 If our shopping cart does not have an employee discount, then it should return a string saying: `"Sorry, there is no discount to apply to your cart :("`
 
@@ -275,7 +277,7 @@ print(shopping_cart.apply_discount()) # Sorry, there is no discount to apply to 
 
 ## Add a `void_last_item()` method
 
-Finally, you are missing one piece of functionality. What if someone just accidentally added something to their cart or decided that this item is too expensive for their budget? Define a method called `void_last_item` that removes the last item from the shopping cart and updates its total.  If there are no items in the shopping cart, `void_last_item` should return `"There are no items in your cart!"`.
+Finally, you are missing one piece of functionality. What if someone just accidentally added something to their cart or decided that this item is too expensive for their budget? Define a method called `void_last_item()` that removes the last item from the shopping cart and updates its total.  If there are no items in the shopping cart, `void_last_item()` should return `"There are no items in your cart!"`.
 
 
 ```python
