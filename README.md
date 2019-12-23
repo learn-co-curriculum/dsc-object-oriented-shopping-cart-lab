@@ -2,7 +2,7 @@
 # Object Oriented Shopping Cart - Lab
 
 ## Introduction
-In this lab, you'll be mimicking the functionality of a shopping cart with our knowledge of object oriented Python. Your shopping cart will be able to add items of different quantities and prices to the cart, calculate discounts, keep track of what items have been added, and void transactions.
+In this lab, you'll be mimicking the functionality of a shopping cart with your knowledge of object-oriented programming in Python. Your shopping cart will be able to add items of different quantities and prices to the cart, calculate discounts, keep track of what items have been added, and void transactions.
 
 ## Objectives
 
@@ -16,9 +16,9 @@ You will be able to:
 
 ## Instructions
 
-In this lab, you'll practice your object orientated programming skills by modifying the shopping_cart.py file.
+In this lab, you'll practice your object orientated programming skills by modifying the **shopping_cart.py** file.
 
-To start, you'll once again set this notebook to autoreload packages so that when you update shopping_cart.py, you can experiment with the effects here. Remember that while the package will be reloaded, you will need to reinitialize your class instance. Here's an example to get you started:
+To start, you'll once again set this notebook to `autoreload` packages so that when you update **shopping_cart.py**, you can experiment with the effects here. Remember that while the package will be reloaded, you will need to reinitialize your class instance. Here's an example to get you started:
 
 
 ```python
@@ -28,13 +28,13 @@ To start, you'll once again set this notebook to autoreload packages so that whe
 
 
 ```python
-#Import your custom package
+# Import your custom package
 from shopping_cart import ShoppingCart
 ```
 
 
 ```python
-#Initialize an instance of our shopping cart class
+# Initialize an instance of our shopping cart class
 shopping_cart = ShoppingCart()
 ```
 
@@ -48,24 +48,25 @@ shopping_cart = ShoppingCart()
 
 ```python
 # __SOLUTION__ 
-#Import our custom package
+# Import our custom package
 from shopping_cart import ShoppingCart
 ```
 
 
 ```python
 # __SOLUTION__ 
-#Initialize an instance of our shopping cart class
+# Initialize an instance of our shopping cart class
 shopping_cart = ShoppingCart()
 ```
 
-## Add an Initialization Behavior to the ShoppingCart Class
+## Add an Initialization Behavior to the `ShoppingCart()` class
 
-Update your shopping_cart.py file to include an `__init__` method. This should define three default attributes: 'total', which should be set to 0, 'employee_discount', set to None and 'items', set to a blank list. The line of code below should work and produce the previewed output once you do this.
+Update your **shopping_cart.py** file to include an `__init__` method. This should define three default attributes: `total`, which should be set to 0; `employee_discount`, set to `None`; and `items`, set to a blank list. The line of code below should work and produce the previewed output once you do this.
 
 
 ```python
-shopping_cart = ShoppingCart() #Add a line to reinitialize an instance of the class
+# Add a line to reinitialize an instance of the class
+shopping_cart = ShoppingCart() 
 print(shopping_cart.total)
 print(shopping_cart.employee_discount)
 print(shopping_cart.items)
@@ -79,7 +80,8 @@ print(shopping_cart.items)
 
 ```python
 # __SOLUTION__ 
-shopping_cart = ShoppingCart() #Add a line to reinitialize an instance of the class
+# Add a line to reinitialize an instance of the class
+shopping_cart = ShoppingCart() 
 print(shopping_cart.total)
 print(shopping_cart.employee_discount)
 print(shopping_cart.items)
@@ -90,9 +92,9 @@ print(shopping_cart.items)
     []
 
 
-## Add and `add_item()` method.
+## Add an `add_item()` method 
 
-Define an instance method called `add_item()` that will add an item to our cart. It should take in the name of an item, its price, and an optional quantity. The method should increase the shopping cart's total by the appropriate amount and return the new total for the shopping cart.
+Define an instance method called `.add_item()` that will add an item to our cart. It should take in the name of an item, its price, and an optional quantity. The method should increase the shopping cart's total by the appropriate amount and return the new total for the shopping cart. 
 
 > **Hint:** think about how you would like to keep this information in your list of items. Can we imagine wanting to ever check the price of an individual item after we've added it to our cart? What data type do we know of that can associate the item name with its price?
 
@@ -173,12 +175,13 @@ shopping_cart.add_item("jeans", 50.00, 3) # 206.49
 
 ## Add Summary Methods `mean_item_price()` and `median_item_price()` 
 
-Define two more instance methods: `mean_item_price()` and `median_item_price()`, which should return the average price per item and the median price of the items in your cart, respectively. 
+Define two more instance methods: `.mean_item_price()` and `.median_item_price()`, which should return the average price per item and the median price of the items in your cart, respectively. 
 
-> **Remember:** the mean is the average price per item and to find the median we must do three things:
+> **Remember:** the mean is the average price per item and to find the median we must do three things: 
+
 * First, put all numbers in our list in ascending order (smallest to greatest)
 * Then check to see if there is an odd number of elements in our list. If so, the middle number is the median
-* Finally, if there is an even number of elements in the list, the median will be the average or mean of the two center elements (e.g. given the list `[1,2,3,4]` the elements `2` and `3` are the two center elements and the median would be (2 + 3)/2 or `2.5`).
+* Finally, if there is an even number of elements in the list, the median will be the average or mean of the two center elements (e.g. given the list `[1, 2, 3, 4]` the elements 2 and 3 are the two center elements and the median would be (2 + 3)/2 or 2.5)  
 
 
 ```python
@@ -230,9 +233,9 @@ shopping_cart.median_item_price() # 50.00
 
 
 
-## Add an `apply_discount` method
+## Add an `apply_discount()` method 
 
-Now, define an instance method called `apply_discount()` that applies a discount if one is provided and returns the discounted total. For example, if you initialize a new shopping cart with a discount of 20% then our total should be discounted in the amount of 20%. So, if our total were `$100`, after the discount you only would owe `$80`.
+Now, define an instance method called `.apply_discount()` that applies a discount if one is provided and returns the discounted total. For example, if you initialize a new shopping cart with a discount of 20% then our total should be discounted in the amount of 20%. So, if our total were $ \$100 $, after the discount you only would owe $ \$80 $.
 
 If our shopping cart does not have an employee discount, then it should return a string saying: `"Sorry, there is no discount to apply to your cart :("`
 
